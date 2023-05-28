@@ -22,7 +22,7 @@ In order to use the component attach "clipping-plane" to an entity. The componen
 * <b>mouseScrollSpeed: { type: 'float', default: 0.0005 }</b> - Mouse scrolling speed or delta. 
 * <b>touchScrollSpeed: { type: 'float', default: 0.01 }</b> - Touch based scrolling speed or delta.
 
-The code below shows the sample implementation of the component. Please make sure to add <a-camera></a-camera> to enable scrolling/touch move events:
+The code below shows the sample implementation of the component. Please make sure to add <a-camera></a-camera> to enable scrolling/touch move events. Clipping plane gets activated after clicking on GTLF/mesh (i.e. first click on GLTF and then scroll/touch move):
 ```
 <!DOCTYPE html>
 <html lang="en">
