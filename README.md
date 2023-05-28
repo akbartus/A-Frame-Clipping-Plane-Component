@@ -22,39 +22,25 @@ In order to use the component attach "clipping-plane" to an entity. The componen
 * <b>mouseScrollSpeed: { type: 'float', default: 0.0005 }</b> - Mouse scrolling speed or delta. 
 * <b>touchScrollSpeed: { type: 'float', default: 0.01 }</b> - Touch based scrolling speed or delta.
 
-The code below shows the sample implementation of the component. Please make sure to disable default lights in scene so that the component takes over (light="defaultLightsEnabled: false"):
+The code below shows the sample implementation of the component. Please make sure to add <a-camera></a-camera> to enable scrolling/touch move events:
 ```
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SpotLight Texture Component (aka Texture projection)</title>
+    <title>A-Frame Component: Clipping Plane</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="js/spotlight-texture-component.js"></script>
+    <script src="js/clipping-plane-component.js"></script>
 </head>
 <body>
-    <a-scene light="defaultLightsEnabled: false" 
-    spotlight-texture="
-    lightHelper: true; 
-    spotlightShadow: true; 
-    spotlightDynamic: true;
-    spotlightColor: #ffffff;
-    spotlightIntensity: 15;
-    spotlightDistance: 90;
-    spotlightAngle: 0.5;
-    spotlightPenubra: 1;
-    spotlightDecay: 2;
-    spotlightFocus: 1;
-    spotlightPosition: 0, 40, 0;
-    imgTexture: false;
-    imgTextureSrc: textures/uvGrid.jpg;
-    videoTextureSrc: textures/trailer.mp4
-    ">
-        <a-camera position="0 15 20"></a-camera>
-        <a-box scale="10 10 10" position="-20 5 0" shadow="cast: true"></a-box>
-        <a-gltf-model src="models/soldier.glb" scale="10 10 10" rotation="0 180 0" shadow="cast: true"></a-gltf-model>
-        <a-sky color="#000000"></a-sky>
+    <a-scene>
+        <a-entity clipping-plane="gltfURL: models/toyCar.glb; gltfPosition: 0 1 -0.5; gltfScale: 0.005 0.005 0.005;"></a-entity>
+        <a-entity clipping-plane="gltfURL: models/sheenChair.glb; gltfPosition: -2 0 0; gltfScale: 0.9 0.9 0.9; clippingDirection: front-to-back;"></a-entity>
+        <a-plane position="0 0 -1" rotation="-90 0 0" width="8" height="8" color="#a4b6c9"
+            shadow="receive: true"></a-plane>
+        <a-camera position="0 2 2.5"></a-camera> <!-- Required for click events --> 
+        <a-sky color="#dfdfdf"></a-sky>
     </a-scene>
 </body>
 </html>
