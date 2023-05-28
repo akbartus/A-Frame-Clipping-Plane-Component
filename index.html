@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A-Frame Component: Clipping Plane</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="js/clipping-plane-component.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-entity clipping-plane="gltfURL: models/toyCar.glb; gltfPosition: 0 1 -0.5; gltfScale: 0.005 0.005 0.005;"></a-entity>
+        <a-entity clipping-plane="gltfURL: models/sheenChair.glb; gltfPosition: -2 0 0; gltfScale: 0.9 0.9 0.9; clippingDirection: front-to-back;"></a-entity>
+        <a-plane position="0 0 -1" rotation="-90 0 0" width="8" height="8" color="#a4b6c9"
+            shadow="receive: true"></a-plane>
+        <a-camera position="0 2 2.5"></a-camera> <!-- Required for click events --> 
+        <a-sky color="#dfdfdf"></a-sky>
+    </a-scene>
+</body>
+</html>
