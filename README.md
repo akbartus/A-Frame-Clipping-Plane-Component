@@ -11,20 +11,16 @@ This is an A-Frame component, which demonstrates clipping planes. It was develop
 
 ### **Instructions**
 In order to use the component attach "clipping-plane" to an entity. The component has the following attributes: 
-* <b>lightHelper: { type: 'boolean', default: true }</b> - spotlight helper. It helps to see the location and direction of spotlight in the scene.
-* <b>spotlightShadow: { type: 'boolean', default: false }</b> - enables or disables shadow of 3d objects. Requires that objects in scene have "shadow='cast: true'" attribute.
-* <b>spotlightDynamic: { type: 'boolean', default: false }</b> - Adds spotlight animation (movement). If disabled, spotlight becomes static. 
-* <b>spotlightColor: { type: 'color', default: '#ffffff' }</b> - The color of the spotlight.
-* <b>spotlightIntensity: { type: 'float', default: 10 }</b> - Intensity of the spotlight.
-* <b>spotlightDistance: { type: 'float', default: 100 }</b> - Distance of the spotlight.
-* <b>spotlightAngle: { type: 'float', default: 0.5 }</b> - Angle of the spotlight. Accepts float values from 0.0 to 1.0
-* <b>spotlightPenubra: { type: 'float', default: 1 }</b> - Penubra of the spotlight.
-* <b>spotlightDecay: { type: 'float', default: 2 }</b> - Decay of the spotlight.
-* <b>spotlightFocus: { type: 'float', default: 1 }</b> - Focus(size) of the spotlight.
-* <b>spotlightPosition: { type: 'vec3', default: { x: 10, y: 35, z: 10 } }</b> - Position of the spotlight.
-* <b>imgTexture: { type: 'boolean', default: true }</b> - If enabled projects image texture over objects in scene. If disabled projects video over objects in scene. 
-* <b>imgTextureSrc: { type: 'string', default: '' }</b> - Source/URL of image texture.
-* <b>videoTextureSrc: { type: 'string', default: '' }</b> - source/URL of video texture.
+* <b>gltfURL: { type: 'string', default: '' }</b> - URL of the GLTF file.
+* <b>gltfPosition: { type: 'vec3', default: { x: 0, y: 0, z: 0 } }</b> - GLTF position in 3D scene.
+* <b>gltfScale: { type: 'vec3', default: { x: 1, y: 1, z: 1 } }</b> - GLTF scale in 3D scene. 
+* <b>clippingDirection: { type: 'string', default: 'top-to-bottom' }</b> - Direction of the clipping plane or from where it should move. Has the following options: "top-to-bottom" (on Y-axis), "bottom-to-top" (on Y-axis), "front-to-back" (on Z-axis), "back-to-front" (on Z-axis), "left-to-right" (on X-axis), "right-to-left" (on X-axis).  
+* <b>gltfMatSide: { type: 'boolean', default: false }</b> - Whether mesh should have double sided material.
+* <b>planeConstant: { type: 'float', default: 2.0 }</b> // Original clipping plane locaion on X or Y or Z axis. It is from where it starts.
+* <b>minScrollValue: { type: 'float', default: -1.0 }</b> - Minimal value beyond which clipping plane will not go. X or Y or Z axis.
+* <b>maxScrollValue: { type: 'float', default: 2.0 }</b> - Maximal value beyond which clipping plane will not go. X or Y or Z axis
+* <b>mouseScrollSpeed: { type: 'float', default: 0.0005 }</b> - Mouse scrolling speed or delta. 
+* <b>touchScrollSpeed: { type: 'float', default: 0.01 }</b> - Touch based scrolling speed or delta.
 
 The code below shows the sample implementation of the component. Please make sure to disable default lights in scene so that the component takes over (light="defaultLightsEnabled: false"):
 ```
