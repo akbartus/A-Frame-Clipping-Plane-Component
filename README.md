@@ -1,6 +1,5 @@
 # A-Frame-Clipping-Plane-Component
 <img src="img/screenshot.gif" title="Video screen capture" alt="Video screen capture" height="300">
-<img src="img/screenshot2.gif" title="Video screen capture" alt="Video screen capture" height="300">
 
 ### **Description / Rationale**
 This is an A-Frame component, which demonstrates clipping planes. It was developed based on corresponding <a href="https://threejs.org/examples/webgl_clipping.html">example</a> provided by Three.js library. However it also has some distinguishing features: 
