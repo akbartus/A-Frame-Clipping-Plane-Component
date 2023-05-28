@@ -47,7 +47,7 @@ The code below shows the sample implementation of the component. Please make sur
 ```
 
 ### **Tech Stack**
-The project is powered by AFrame and Three.js. The video used in the example was taken from <a href="https://media.w3.org/2010/05/sintel/">here</a> and image textures from <a href="https://github.com/mrdoob/three.js/tree/master/examples/textures">Three.js repository</a>.
+The project is powered by AFrame and Three.js. The models used in the example were taken from <a href="[https://media.w3.org/2010/05/sintel/](https://github.com/mrdoob/three.js/tree/master/examples/models/gltf)">Three.js library</a>.
 
 ### **Demo**
-See demo of the component here: [Demo](https://spotlight-texture.glitch.me/)
+See demo of the component here: [Demo](https://c-plane.glitch.me/)
