@@ -22,7 +22,7 @@ In order to use the component attach "clipping-plane" to an entity. The componen
 * <b>mouseScrollSpeed: { type: 'float', default: 0.0005 }</b> - Mouse scrolling speed or delta. 
 * <b>touchScrollSpeed: { type: 'float', default: 0.01 }</b> - Touch based scrolling speed or delta.
 
-The code below shows the sample implementation of the component. Please make sure to add <a-camera></a-camera> to enable scrolling/touch move events. Clipping plane gets activated after clicking on GTLF/mesh (i.e. first click on GLTF and then scroll/touch move):
+The code below shows the sample implementation of the component. Please make sure to add <a-camera></a-camera> to enable scrolling/touch move events:
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -45,6 +45,7 @@ The code below shows the sample implementation of the component. Please make sur
 </body>
 </html>
 ```
+Clipping plane gets activated after clicking on GTLF/mesh. Then use mouse scroller. For touch based devices, first touch the GLTF and then touch and move up or down (drag).
 
 ### **Tech Stack**
 The project is powered by AFrame and Three.js. The models used in the example were taken from <a href="[https://media.w3.org/2010/05/sintel/](https://github.com/mrdoob/three.js/tree/master/examples/models/gltf)">Three.js library</a>.
